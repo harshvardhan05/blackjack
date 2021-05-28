@@ -14,7 +14,7 @@ let message = ""
 let sum = 0
 let player = {
     name: "Harsh",
-    chips: 25
+    chips: Math.floor( Math.random()*100 ) + 10
 }
 playerEl.textContent = player.name +": $"+ player.chips
 // console.log(cards)
@@ -38,7 +38,7 @@ function getRandomCard(){
 
 
     function startGame(){
-        if(player.chips >= 0){
+        if(player.chips >= 10){
             isAlive = true
             let firstCard = getRandomCard()
             let secondCard = getRandomCard()
